@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HugeHoldings - Fun Mobile Games for Everyone</title>
+    <meta name="description" content="Discover fun and addictive mobile games. Play, explore, and enjoy a world of creativity right on your phone." />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="site-header">
+        <div class="container">
+            <a href="#hero">
+                <img src="images/logo-monogram.png" alt="Huge Holdings Logo" class="logo">
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section id="hero" class="hero-section">
+        <div class="hero-content">
+            <h1 class="hero-title animate-fade-in">Huge Holdings</h1>
+            <p class="hero-description animate-fade-in">We design and build mobile apps and games that bring creativity, fun, and innovation to your fingertips.</p>
+            <a href="#portfolio" class="hero-cta-button animate-fade-in">Learn More</a>
+        </div>
+        <a href="#portfolio" class="scroll-indicator">
+            <div class="scroll-mouse"></div>
+        </a>
+    </section>
+
+    <main>
+        <!-- Portfolio -->
+        <section id="portfolio" class="portfolio-section">
+            <div class="container">
+                <h2>Our Games</h2>
+                <p class="section-subtitle">Dive into our world of mobile fun and addictive adventures.</p>
+
+                <!-- Carousal -->
+                <div class="swiper portfolio-carousel">
+                    <div class="swiper-wrapper">
+                        <!-- Games will be injected here by JavaScript -->
+                    </div>
+                    <!-- Pagination -->
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter -->
+        <section id="newsletter" class="newsletter-section">
+            <div class="container newsletter-container">
+                <h2>Level Up With Us!</h2>
+                <p class="section-subtitle">Subscribe for the latest game launches, sneak peeks, and exclusive updates. No spam, pure fun. We promise.</p>
+
+                <!-- Mailchimp Form -->
+                <!-- REPLACE YOUR MAILCHIMP ACTION URL FROM EMBED CODE HERE INTO ACTION-->
+                <form action="" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="newsletter-form validate" target="_blank">
+                    <input type="email" name="EMAIL" class="required email" id="mce-EMAIL" required placeholder="enter.your.email@example.com">
+
+                    <div aria-hidden="true" style="position: absolute; left: -5000px;">
+                        <!-- REPLACE YOUR MAILCHIMP NAME ATTRIBUTE FROM EMBED CODE HERE INTO NAME-->
+                        <input type="text" name="" tabindex="-1" value="">
+                    </div>
+                    <button type="submit" name="subscribe" id="mc-embedded-subscribe">Join Now</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="site-footer">
+            <div class="container footer-container">
+                <div class="footer-about">
+                    <a href="#hero">
+                        <img src="images/logo.png" alt="Huge Holdings Logo" class="footer-logo">
+                    </a>
+                    <div class="footer-about-text">
+                        <p>Creating fun and addictive mobile games for everyone to enjoy.</p>
+                        <a href="mailto:contact@hugeholdings.com" class="footer-contact">contact@hugeholdings.com</a>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <div class="footer-social">
+                        <h3>Follow Us</h3>
+                        <ul>
+                            <li><a href="#" target="_blank">X</a></li>
+                            <li><a href="#" target="_blank">Facebook</a></li>
+                            <li><a href="#" target="_blank">Instagram</a></li>
+                            <li><a href="#" target="_blank">LinkedIn</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-legal">
+                        <h3>Legal</h3>
+                        <ul>
+                            <li><a href="privacy.html">Privacy Policy</a></li>
+                            <li><a href="terms.html">Terms of Service</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <p>&copy; <span id="copyright-year"></span> HugeHoldings. All Rights Reserved.</p>
+            </div>
+        </footer>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
