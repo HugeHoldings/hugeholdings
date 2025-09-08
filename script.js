@@ -1,5 +1,28 @@
 document.addEventListener('DOMContentLoaded', function () {
 
+    function loadFooter() {
+        fetch('_footer.html')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                // Get the footer HTML as a string
+                return response.text();
+            })
+            .then(data => {
+                // Inject the footer HTML
+                document.getElementById('footer-placeholder').innerHTML = data;
+
+                // Run the copyright script.
+                updateCopyrightYear();
+            })
+            .catch(error => {
+                console.error('Error loading the footer:', error);
+                // Simple message in the footer placeholder in case of error
+                document.getElementById('footer-placeholder').innerHTML = '<p style="text-align: center; color: #aaa;">Failed to load footer.</p>';
+            });
+    }
+
     // Portfolio Carousel Setup
     const gamesData = [
         {
@@ -74,15 +97,14 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     // Copyright Year Update
-    const startYear = 2011;
-    const currentYear = new Date().getFullYear();
-    const yearSpan = document.getElementById('copyright-year');
+    function updateCopyrightYear() {
+        const startYear = 2011;
+        const currentYear = new Date().getFullYear();
+        const yearSpan = document.getElementById('copyright-year');
 
-    if (yearSpan) {
-        if (startYear < currentYear) {
-            yearSpan.textContent = `${startYear}–${currentYear}`;
-        } else {
-            yearSpan.textContent = startYear;
+        if (yearSpan) {
+            yearSpan.textContent =
+                startYear < currentYear ? `${startYear}–${currentYear}` : startYear;
         }
     }
 
@@ -124,4 +146,6 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         }, 1000);
     }
+
+    loadFooter();
 });
